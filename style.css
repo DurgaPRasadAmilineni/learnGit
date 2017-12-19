@@ -1,0 +1,85 @@
+.logo
+{
+   
+    color: cornsilk;
+    text-align: center;
+    font-size: 25pt;
+}
+
+.logo:hover
+{
+    animation: movefromright 1s ease-out;
+    color: cornsilk;
+    text-align: center;
+    font-size: 25pt;
+    backface-visibility: hidden;
+}
+
+
+
+.heading {
+color: white;
+  display: block;
+  font-size: 60px;
+  font-weight: 400px;
+  letter-spacing: 35px;
+  text-align: center;
+
+  animation: movefromleft;
+  animation-duration: 3s;
+  animation-timing-function: ease, step-start, cubic-bezier(0.1, 0.7, 1.0, 0.1);
+    /*To perform the animation for a repeated period of times we can do the following*/
+   /* animation-iteration-count: 3;*/
+  /*To create a delay we perform this*/
+    /*animation-delay: 3s;*/
+}
+h1{
+    backface-visibility: hidden;
+    text-transform: uppercase;
+}
+.heading2
+{
+    color: white;
+    display: block;
+    font-size: 60px;
+    font-weight: 400px;
+    letter-spacing: 35px;
+    text-align: center;
+  
+    animation: movefromright 1s ease-out;
+    animation-duration: 3s;
+    
+    /*animation-timing-function: movefromright 1s ease-out;*/
+
+}
+body
+{
+    background-color: rgb(54, 12, 12);
+}
+@keyframes movefromleft {
+    0%
+    {
+        opacity: 0;
+        transform: translateX(-100px) rotate(-50deg);
+    }
+    100%{
+        opacity: 1;
+        transform: translate(0) rotate(90deg);
+    }
+}
+
+@keyframes movefromright {
+    0%
+    {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    80%
+    {
+        transform: translateX(-10px);
+    }
+    100%{
+        opacity: 1;
+        transform: translate(0);
+    }
+}
